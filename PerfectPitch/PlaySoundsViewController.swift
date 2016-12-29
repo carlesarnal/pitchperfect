@@ -21,7 +21,7 @@ class PlaySoundsViewController: UIViewController {
     @IBOutlet weak var reverbButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
     
-    
+
     var audioFile:AVAudioFile!
     var audioEngine:AVAudioEngine!
     var audioPlayerNode: AVAudioPlayerNode!
@@ -36,15 +36,11 @@ class PlaySoundsViewController: UIViewController {
         configureUI(.notPlaying)
     }
     
-
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
-
         // Do any additional setup after loading the view.
     }
-    
-    
     
     @IBAction func playSoundForButton(_ sender: UIButton) {
         switch(ButtonType(rawValue: sender.tag)!) {
@@ -61,14 +57,10 @@ class PlaySoundsViewController: UIViewController {
         case .reverb:
             playSound(reverb: true)
         }
-        
         configureUI(.playing)
     }
     
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
         stopAudio()
     }
-
-
-
 }
