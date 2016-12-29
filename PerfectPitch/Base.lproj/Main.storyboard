@@ -23,29 +23,33 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="E5A-QM-gNw">
-                                <rect key="frame" x="101" y="195" width="172" height="276"/>
+                                <rect key="frame" x="110" y="195.5" width="155" height="275.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xax-cz-Lpy">
-                                        <rect key="frame" x="0.0" y="0.0" width="171.5" height="155"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="155" height="155"/>
                                         <state key="normal" image="Record"/>
                                         <connections>
                                             <action selector="startRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8a7-f1-Ag0"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap for start recording" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdp-Ac-GN1">
-                                        <rect key="frame" x="0.0" y="155" width="171.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to record" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdp-Ac-GN1">
+                                        <rect key="frame" x="0.0" y="155" width="155" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zGB-hd-iFB">
-                                        <rect key="frame" x="0.0" y="175.5" width="171.5" height="100"/>
+                                        <rect key="frame" x="0.0" y="175.5" width="155" height="100"/>
                                         <state key="normal" image="Stop"/>
                                         <connections>
                                             <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VVQ-vO-EqG"/>
                                         </connections>
                                     </button>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="zGB-hd-iFB" firstAttribute="centerX" secondItem="E5A-QM-gNw" secondAttribute="centerX" id="MhT-01-idY"/>
+                                    <constraint firstItem="xax-cz-Lpy" firstAttribute="centerX" secondItem="E5A-QM-gNw" secondAttribute="centerX" id="j7D-iJ-d3L"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
